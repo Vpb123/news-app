@@ -44,7 +44,7 @@ function Navbar() {
                     className='nav-link' 
                 >
                     <img className='nav-logo' src="https://brandlogos.net/wp-content/uploads/2022/09/autodesk_revit-logo_brandlogos.net_4hpe4-512x512.png" alt="Logo" />
-                    <h1 className='nav-title'>Daily News</h1>
+                    <h1 className='nav-title'>US Daily News</h1>
                 </Link>
 
                 {currentUser && <ul className="nav-links-container">

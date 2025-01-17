@@ -9,7 +9,9 @@ const initialStateValue = {
 
 const fetchCateredNews = createAsyncThunk('news/fetchCateredNews', async (searchString) => {
     try {
-        const response = await axios.get(`https://saurav.tech/NewsAPI/top-headlines/category/${searchString.toLowerCase()}/in.json`);
+        const API_KEY = "5c4e557cbf0e489eb2a47e69cf97b724";
+        const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${searchString.toLowerCase()}&country=us&apiKey=${API_KEY}`);
+        console.log(response);
         return { [searchString]: response.data.articles.slice(0, 60) };
     } catch (error) {
         throw error;
